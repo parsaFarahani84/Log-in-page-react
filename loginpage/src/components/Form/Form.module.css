@@ -1,0 +1,39 @@
+.form {
+  background-color: rgb(71, 71, 71);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20vh;
+  /* align-items: center; */
+}
+
+.h1 {
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.container input {
+  padding: 0.3rem;
+}
+
+.container button {
+  padding: 0.6rem 1rem;
+  transition: all 0.3s;
+  border-radius: 5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.container button:hover {
+  background-color: #333;
+  color: aliceblue;
+}

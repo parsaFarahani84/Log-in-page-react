@@ -1,12 +1,18 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
+import Form from "./components/Form/Form";
+import Panel from "./components/Panel/Panel";
 
 function App() {
-  return (
-    <div className="App">
-      <h2>Hello</h2>
-    </div>
-  );
+  const [show, setShow] = useState(false);
+
+  const checkHandler = function (data) {
+    if (data === true) {
+      setShow(true);
+    }
+  };
+
+  return <div>{!show ? <Form checking={checkHandler} /> : <Panel />}</div>;
 }
 
 export default App;
