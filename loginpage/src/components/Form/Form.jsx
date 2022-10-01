@@ -4,12 +4,16 @@ import classes from "./Form.module.css";
 
 function Form(props) {
   const [value, setValue] = useState("");
+  console.log(props.pas);
 
   const passwordChecker = function (e) {
     e.preventDefault();
     setValue("");
-    if (value == 1111) {
+    if (value == props.pas) {
       props.checking(true);
+      console.log("Yes");
+    } else {
+      console.log("NO");
     }
   };
 
