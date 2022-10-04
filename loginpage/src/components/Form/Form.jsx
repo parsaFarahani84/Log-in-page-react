@@ -4,7 +4,7 @@ import classes from "./Form.module.css";
 
 function Form(props) {
   const [value, setValue] = useState("");
-  console.log(props.pas);
+  //   console.log(props.pas);
 
   const passwordChecker = function (e) {
     e.preventDefault();
@@ -22,7 +22,7 @@ function Form(props) {
       <h1 className={classes.h1}>Login Page:</h1>
       <div className={classes.container}>
         <input
-          type="text"
+          type="number"
           placeholder="enter your password"
           className={classes.input}
           value={value}

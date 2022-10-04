@@ -7,7 +7,6 @@ function Password(props) {
 
   const submitHandler = function (e) {
     e.preventDefault();
-    console.log(pas);
     props.newPas(pas);
     setPas("");
   };
@@ -17,6 +16,7 @@ function Password(props) {
       <h1>Please Enter Your Password:</h1>
       <div className={classes.div}>
         <input
+          type="number"
           className={classes.input}
           value={pas}
           onChange={(e) => setPas(e.target.value)}

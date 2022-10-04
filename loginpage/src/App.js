@@ -16,6 +16,8 @@ function App() {
     }
   };
 
+  const [have, setHave] = useState();
+
   const pas = function (pas) {
     setPass(pas);
   };
@@ -23,21 +25,21 @@ function App() {
   return (
     <BrowserRouter>
       <nav className={classes.navbar}>
-        <Link to="/">
+        <Link to="/login">
           {" "}
           <button className={classes.btn} onClick={() => setShow(false)}>
             Log In Page
           </button>
         </Link>
-        <Link to="/newpas">
-          <button className={classes.btn}>Set Password</button>
+        <Link to="/">
+          <button className={classes.btn}>Change Your Password</button>
         </Link>
       </nav>
 
       <Routes>
-        <Route path="/newpas" element={<Password newPas={pas} />}></Route>
+        <Route path="/" element={<Password newPas={pas} />}></Route>
         <Route
-          path="/"
+          path="/login"
           element={
             !show ? <Form checking={checkHandler} pas={pass} /> : <Panel />
           }
