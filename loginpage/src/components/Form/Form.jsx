@@ -9,7 +9,7 @@ function Form(props) {
   const passwordChecker = function (e) {
     e.preventDefault();
     setValue("");
-    if (value == props.pas) {
+    if (value == props.pas && value.length > 0) {
       props.checking(true);
       console.log("Yes");
     } else {

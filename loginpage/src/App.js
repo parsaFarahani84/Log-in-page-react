@@ -25,10 +25,12 @@ function App() {
       <nav className={classes.navbar}>
         <Link to="/">
           {" "}
-          <button className={classes.btn}>Log In</button>
+          <button className={classes.btn} onClick={() => setShow(false)}>
+            Log In Page
+          </button>
         </Link>
         <Link to="/newpas">
-          <button className={classes.btn}>Change Password</button>
+          <button className={classes.btn}>Set Password</button>
         </Link>
       </nav>
 

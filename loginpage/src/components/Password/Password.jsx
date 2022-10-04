@@ -3,7 +3,7 @@ import { useState } from "react";
 import classes from "./Password.module.css";
 
 function Password(props) {
-  const [pas, setPas] = useState(1111);
+  const [pas, setPas] = useState();
 
   const submitHandler = function (e) {
     e.preventDefault();
@@ -14,7 +14,7 @@ function Password(props) {
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
-      <h1>Please Enter New Password:</h1>
+      <h1>Please Enter Your Password:</h1>
       <div className={classes.div}>
         <input
           className={classes.input}
